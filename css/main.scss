@@ -1,0 +1,231 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;400&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css");
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: 'Montserrat';
+}
+
+header{
+
+  #logo{
+    color:$lightColor;
+    font-family:'Abril Fatface','Montserrat';
+  }
+}
+
+.navHeader{
+  min-height: 10vh;
+  font-size:1rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $lightColor;
+  width:80%;
+  margin: auto;
+  padding:2rem 0rem;
+  z-index: 2;
+  position: relative;
+}
+
+.line1,.line2{
+  width:3rem;
+  height: .2rem;
+  margin:.4rem;
+  background:$lightColor;
+  pointer-events: none;
+}
+
+body{
+  background:$darkColor;
+  font-family:"Montserrat",sans-sarif;
+  overflow-x: hidden;
+  &.hide{
+    overflow: hidden;
+  }
+}
+
+.slide{
+  min-height: 100vh;
+  margin:0 auto 0 auto;
+  width:80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $lightColor;
+  background: $darkColor;
+  overflow: hidden;
+}
+.heroDescription{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-basis:20rem ;
+  padding-left:5rem;
+  position: relative;
+}
+
+.heroImg{
+  position: relative;
+  flex: 1;
+  flex-basis: 25rem;
+  overflow: hidden;
+
+}
+.heroImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fashionSpan{
+  color:rgb(255,139,93);
+}
+.mountainSpan{
+  color:rgb(86,124,228);
+}
+.hikeSpan{
+  color:rgb(167,110,231);
+}
+
+
+.heroDescription h2{
+  font-family: 'Abril Fatface';
+  font-size: 2.5rem;
+}
+
+.heroDescription p{
+  padding: 2rem 0rem;
+  font-family: 1.5rem;
+  color:rgb(223,223,223);
+}
+
+.explore{
+  padding:1rem 2rem;
+  background:none;
+  border:none;
+  color: $lightColor;
+  border:1px solid $lightColor;
+  font-size:1rem;
+  text-decoration: none;
+  align-self:flex-start;
+  cursor: pointer;
+}
+.navBar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $lightColor;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+
+.burger{
+  cursor: pointer;
+}
+.navLinks{
+  font-size: 2rem;
+  flex-basis:30rem;
+
+h3{
+  // font-size: .5rem;
+padding:1.5rem 0rem;
+  }
+}
+
+
+
+.contact{
+  flex-basis:30rem;
+  h2{
+    font-size: 3rem;
+    padding:2rem 0rem;
+  }
+  p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.revealImg,.revealText{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:$darkColor;
+  left: 0;
+  top: 0;
+  // overflow-x: hidden;
+}
+// .revealImg{
+//   // background:bisque;
+  
+// }
+.cursor{
+  font-size: .5rem;
+  border-radius: 50%;
+  width:2rem;
+  height: 2rem;
+  border: 2px solid $lightColor;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  transition: all .5s ease-in-out;
+  transition-property: background,transform;
+  transform-origin: 75%,75%;
+  &.navActive{
+    background: rgb(86,124,228);
+    transform:scale(2);
+  }
+  &.exploreActive{
+    background: white;
+    transform: scale(2);
+  }
+  &Text{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    font-size: .5rem;
+    transform: translate(-50%,-50%) ;
+  }
+}
+.title{
+  position: relative;
+  overflow: hidden;
+}
+.titleSwipe{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: lightblue;
+  mix-blend-mode: darken ;
+  transform: translateY(100%);
+}
+.tSwipe1{
+  background: rgb(86,124,228);
+}
+.tSwipe2{
+ background: rgb(167,110,228);
+}
+.tSwipe3{
+  background: rgb(223,139,93);
+}
+.scrollmagic-pin-spacer{
+  position: static !important;
+}
+
+
